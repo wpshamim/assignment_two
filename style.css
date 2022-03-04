@@ -461,6 +461,12 @@ footer {
     
 
 @media only screen and (max-width: 600px){
+    .header__top {
+        display: none;
+    }
+    .header__title {
+        width: 100%;
+    }
     .half--width {
         width: 100%;
         margin-bottom: 50px;
@@ -482,7 +488,7 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
     .galleries {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     .display--width {
         width: 95%;
