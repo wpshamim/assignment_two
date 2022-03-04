@@ -1,0 +1,294 @@
+/* css reset code */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+img {
+    max-width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+    line-height: 40px;
+}
+p {
+    line-height: 30px;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  */
+
+/*-------------------------
+        color variables
+    ---------------------------*/
+
+:root {
+    --primary-color: #E02C6D;
+    --secondary-color: #E7E7E8;
+    --header-bg: #2D25A0;
+    --card-bg: #FFFFFF;
+    --white-text: #FFFFFF;
+    --paragraph-text: #6C6C6C;
+    --title-text: #18191F;
+}
+
+/*-------------------------------
+        header area stylesheets 
+    ---------------------------------*/
+header {
+    background-color: var(--header-bg);
+    min-height: 100vh;
+}
+.headers {
+    position: relative;
+}
+.display--width {
+    width: 1280px;
+    margin: auto;
+}
+.header__top {
+    position: absolute;
+    top: 42px;
+    width: 100%;
+}
+.menu__rows {
+    display: flex;
+    column-gap: 36px;
+}
+.menu__link {
+    color: var(--white-text);
+    text-decoration: none;
+}
+.btn {
+    padding: 13px 25px;
+    color: var(--white-text);
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+    column-gap: 10px;
+}
+.btn i {
+    font-size: 20px;
+}
+.btn--primary {
+    background-color: var(--primary-color);
+}
+.header__main {
+    padding-top: 135px;
+}
+.header__content {
+    width: 100%;
+}
+.display--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.half--width {
+    width: 50%;
+}
+.header__title {
+    color: var(--white-text);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+/*-------------------------------
+        players profile section 
+    ---------------------------------*/
+
+section {
+    padding-top: 70px;
+}
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.player__card {
+    background-color: var(--card-bg);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+.player__name {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: var(--title-text);
+}
+.player__description {
+    color: var(--paragraph-text);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/*-----------------------------------------
+        match highlight video section 
+    ---------------------------------*/
+
+
+.highlight__title {
+    font-size: 48px;
+    line-height: 60px;
+}
+.highlight_paragraph {
+    padding: 25px 0;
+}
+.highlight__video iframe {
+    width: 100%;
+    height: 400px;
+    box-shadow: 0px 0px 40px rgb(0 0 0 / 15%);
+}
+
+/*-------------------------
+        gallery section 
+    --------------------------*/
+
+.gallery__sections {
+    background-image: url(images/gallery/gallery-bg.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.gallery__head {
+    text-align: center;
+    color: var(--white-text);
+    padding: 60px 0;
+}
+.gallery__title {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 35px;
+}
+.gallery__title::after {
+    content: "";
+    width: 40px;
+    height: 5px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gallery__text {
+    font-size: 16px;
+}
+.galleries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.gallery__card {
+    position: relative;
+    overflow: hidden;
+   
+}
+.gallery__card:hover .gallery__hover {
+    background-color: rgba(24, 25, 31, 0.765);
+    top: 0;
+    z-index: 1;
+    text-indent: 0;
+}
+.gallery__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: flex;
+}
+.gallery__hover {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(24, 25, 31, 0.765); */
+    background-color: rgba(24, 25, 31, 0);
+    position: absolute;
+    top: 0;
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    text-indent: -1000px;
+}
+.gallery__tag {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+.gallery__action {
+    background-color: var(--header-bg);
+    padding: 50px 0;
+}
+.action__text {
+    color: var(--white-text);
+}
+
+
+/* blog */
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.blog__thumb {
+    width: 100%;
+    display: flex;
+}
+.blog__image {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+.blog__title {
+    line-height: 24px;
+}
+.blog_content {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+.blog__section__title, .blog__title {
+    color: var(--title-text);
+}
+.blog_article {
+    margin: 15px 0px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--paragraph-text);
+}
