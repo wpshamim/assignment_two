@@ -464,8 +464,12 @@ footer {
     .header__top {
         display: none;
     }
+    .header__main {
+        padding-top: 35px;
+    }
     .header__title {
         width: 100%;
+        font-size: 3.5em;
     }
     .half--width {
         width: 100%;
@@ -473,6 +477,12 @@ footer {
     }
     .display--flex {
         flex-direction: column;
+    }
+   
+    .gallery__card {
+        border: 5px solid;
+        margin: 10px;
+        border-color: var(--card-bg)
     }
     header {
         padding-bottom: 50px;
