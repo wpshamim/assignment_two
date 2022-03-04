@@ -308,6 +308,7 @@ section {
     object-fit: cover;
     width: 100%;
     transition: .5s;
+    display: flex;
 }
 .blog__image:hover {
     transform: scale(120%);
